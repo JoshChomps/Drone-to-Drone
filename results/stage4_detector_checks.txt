@@ -1,0 +1,18 @@
+[realistic detector] five observers, 3840 px unless stated; 16 seeds x 60 s; mean [worst seed]; count ok with a 95 % interval over seeds
+  configuration                              found       count ok          error m      swaps/drone/min  false tracks
+  baseline (doc 03 section 6)                100 % [ 99]   82 % [ 67- 97]   1.68 [ 2.8]  0.87 [ 4.3]      0.33 [ 3.2]
+  false alarms 0.05 per frame                100 % [ 99]   76 % [ 60- 92]   1.70 [ 2.6]  0.61 [ 3.4]      0.33 [ 2.0]
+  false alarms 0.10 per frame                100 % [ 99]   68 % [ 53- 82]   1.68 [ 2.6]  0.36 [ 1.4]      0.55 [ 2.6]
+  false alarms 0.16 per frame                 99 % [ 95]   42 % [ 30- 55]   1.70 [ 2.6]  0.72 [ 2.6]      0.93 [ 3.6]
+  degraded detection curve                   100 % [ 99]   79 % [ 62- 97]   1.68 [ 2.8]  0.83 [ 8.2]      0.49 [ 4.0]
+  box width +25 % under 8 px                 100 % [ 99]   82 % [ 67- 97]   1.68 [ 2.8]  0.87 [ 4.3]      0.33 [ 3.2]
+  all three (FA 0.10)                        100 % [ 96]   65 % [ 47- 82]   1.74 [ 2.8]  0.63 [ 2.6]      0.64 [ 3.6]
+  all three, headings calibrated to 0.5 deg  100 % [100]   94 % [ 90- 99]   0.97 [ 1.6]  0.07 [ 0.5]      0.06 [ 0.2]
+  FA 0.16, three cameras to confirm           99 % [ 95]   49 % [ 36- 63]   1.70 [ 2.6]  0.69 [ 2.6]      0.77 [ 3.0]
+  1280 px camera                              99 % [ 96]   81 % [ 68- 93]   2.06 [ 3.4]  1.12 [ 3.6]      0.29 [ 1.6]
+  1280 px camera, all three (FA 0.10)         99 % [ 95]   69 % [ 57- 80]   2.16 [ 3.5]  0.51 [ 1.4]      0.45 [ 1.6]
+[more seeds] five observers, 3840 px unless stated; 32 seeds x 60 s; mean [worst seed]; count ok with a 95 % interval over seeds
+  configuration                              found       count ok          error m      swaps/drone/min  false tracks
+  baseline                                   100 % [ 99]   75 % [ 64- 87]   1.70 [ 2.8]  0.74 [ 4.3]      0.46 [ 3.2]
+  drone size known                           100 % [ 99]   64 % [ 51- 78]   1.66 [ 2.4]  1.16 [ 6.5]      0.57 [ 3.4]
+  1280 px camera                              99 % [ 95]   75 % [ 63- 87]   2.08 [ 3.4]  0.97 [ 3.6]      0.45 [ 3.3]

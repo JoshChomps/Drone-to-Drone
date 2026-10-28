@@ -1,0 +1,31 @@
+[stage 7b leaks] teammate boxes not labelled, cued + calibrated, 16 seeds x 60 s
+  5 observers: 903 leaked boxes; 16 in the first second (calibration not yet converged)
+    cue out of view while the box is in view: 499 (box within 100 px of the image edge: 486)
+    cue in view, outside the gate: 404; largest gate term horizontal 1, vertical 331, size 72
+      range m                  median   89.76  10-90 %   61.48 -  116.31
+      width px                 median   25.11  10-90 %   14.32 -   45.17
+      nearest other box px     median  616.92  10-90 %  277.99 - 1103.89
+      heading error deg        median    0.27  10-90 %    0.05 -    0.57
+      shared position error m  median    2.13  10-90 %    1.23 -    2.51
+      gate terms (median): horizontal   0.4  vertical  10.2  size   1.6  (gate 11.3 on the sum)
+  3 observers: 272 leaked boxes; 6 in the first second (calibration not yet converged)
+    cue out of view while the box is in view: 106 (box within 100 px of the image edge: 106)
+    cue in view, outside the gate: 166; largest gate term horizontal 0, vertical 153, size 13
+      range m                  median   97.67  10-90 %   78.28 -  117.66
+      width px                 median   22.97  10-90 %   17.70 -   31.92
+      nearest other box px     median  701.40  10-90 %  310.94 - 1399.92
+      heading error deg        median    0.35  10-90 %    0.04 -    0.84
+      shared position error m  median    2.03  10-90 %    1.15 -    2.27
+      gate terms (median): horizontal   0.1  vertical  11.4  size   0.9  (gate 11.3 on the sum)
+[stage 7] five observers, five other drones; 3840 px, heading bias 2 deg, size unknown, 0.02 false alarms per frame unless stated; 16 seeds x 60 s; means; count ok with a 95 % interval over seeds
+  configuration                                found count ok        err m  swaps  false | heading deg   mate ok leak | other held taken | tiles/frame (full scan 24; 1280 px: 4)
+  cued + calibrated, positions fresh (stage 7) 100 %   87 % [ 78- 96]  0.77  0.14  0.14 | 1.80 -> 0.34 | 99.2  0.8 |  0.0  0.0 |  9.2
+  positions 0.5 s old, used as they are        100 %   44 % [ 34- 54]  0.80  0.14  0.77 | 1.80 -> 0.41 | 96.5  3.4 |  0.0  0.0 |  9.8
+  positions 0.5 s old, dead reckoned           100 %   88 % [ 79- 97]  0.77  0.18  0.13 | 1.80 -> 0.34 | 99.2  0.7 |  0.0  0.0 |  9.2
+  0.5 s old + bursty loss, as they are         100 %   18 % [ 11- 25]  0.81  0.15  1.60 | 1.80 -> 0.42 | 94.6  5.4 |  0.0  0.0 | 10.4
+  0.5 s old + bursty loss, dead reckoned       100 %   88 % [ 80- 97]  0.77  0.12  0.12 | 1.80 -> 0.34 | 99.2  0.8 |  0.0  0.0 |  9.2
+  dead reckoned, clock offsets sd 0.05 s       100 %   90 % [ 84- 96]  0.77  0.07  0.11 | 1.80 -> 0.34 | 99.2  0.8 |  0.0  0.0 |  9.2
+  dead reckoned, clock offsets sd 0.2 s        100 %   76 % [ 64- 87]  0.82  0.10  0.30 | 1.80 -> 0.36 | 98.5  1.5 |  0.0  0.0 |  9.4
+  all link effects, clocks 0.05 s (see doc)    100 %   86 % [ 80- 93]  1.04  0.10  0.14 | 1.80 -> 0.34 | 99.0  1.0 |  0.0  0.0 |  9.6
+  GNSS error drifts, tau 60 s                  100 %   73 % [ 58- 87]  0.79  0.12  0.41 | 1.80 -> 0.33 | 98.7  1.2 |  0.0  0.0 |  9.5
+  GNSS error drifts, tau 10 s                  100 %   74 % [ 64- 84]  0.84  0.10  0.34 | 1.80 -> 0.26 | 98.6  1.4 |  0.0  0.0 |  9.4

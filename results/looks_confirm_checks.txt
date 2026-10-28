@@ -1,0 +1,6 @@
+[looks] stage 7 cued + calibrated, five observers, 3840 px (24 tiles of 640 px); 16 seeds x 60 s; means;
+  count ok with a 95 % interval over seeds; time to find: until each drone first has a confirmed track within 8 m
+  configuration                                  found count ok        err m  swaps  false | heading after  leak | time to find s
+  whole frame, confirm after 10 hits             100 %   97 % [ 94-100]  0.77  0.12  0.03 | 0.34         0.8 |  0.2 [worst  0.2]
+  whole frame, confirm after 20 hits             100 %   97 % [ 95- 99]  0.77  0.12  0.02 | 0.34         0.8 |  0.4 [worst  0.5]
+  whole frame, three cameras to confirm          100 %   97 % [ 94-100]  0.77  0.14  0.03 | 0.34         0.8 |  0.0 [worst  0.1]

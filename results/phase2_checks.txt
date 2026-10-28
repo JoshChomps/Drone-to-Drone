@@ -1,0 +1,60 @@
+[4.1] Delayed P loop, stable iff K*tau < pi/2 = 1.571
+  K=1 tau=0.5  K*tau=0.50  late |err| = 2.8e-14
+  K=1 tau=1.0  K*tau=1.00  late |err| = 1.8e-08
+  K=1 tau=1.5  K*tau=1.50  late |err| = 0.31
+  K=1 tau=1.6  K*tau=1.60  late |err| = 1.8
+  K=2 tau=0.5  K*tau=1.00  late |err| = 5.6e-14
+  K=2 tau=0.8  K*tau=1.60  late |err| = 2.9
+
+[4.1] Leader on a circle R=20 m at 5 m/s; follower uses leader state tau seconds old
+  tau= 0.1: stale 0.50 m (v*tau 0.50); predicted 0.006 m (a*tau^2/2 0.006)
+  tau=0.25: stale 1.25 m (v*tau 1.25); predicted 0.039 m (a*tau^2/2 0.039)
+  tau= 0.5: stale 2.50 m (v*tau 2.50); predicted 0.156 m (a*tau^2/2 0.156)
+  tau= 1.0: stale 4.99 m (v*tau 5.00); predicted 0.624 m (a*tau^2/2 0.625)
+
+[4.1] Ramp tracking with and without velocity feed-forward (K=1, 5 m/s)
+  feed-forward=True: steady error 0.00 m (v/K = 5.0 without)
+  feed-forward=False: steady error 5.00 m (v/K = 5.0 without)
+
+[3.3] Age of information, 10 Hz state stream (no fixed delay added)
+  Bernoulli p=0.0: mean age 50 ms (theory 50); 99.9th pct gap 0.1 s; max 0.1 s
+  Bernoulli p=0.1: mean age 61 ms (theory 61); 99.9th pct gap 0.3 s; max 0.6 s
+  Bernoulli p=0.3: mean age 93 ms (theory 93); 99.9th pct gap 0.6 s; max 1.2 s
+  Bernoulli p=0.5: mean age 150 ms (theory 150); 99.9th pct gap 1.0 s; max 1.9 s
+  Gilbert-Elliott (G->B 2%, B->G 20%): loss 0.090; mean age 94 ms; 99.9th pct gap 1.5 s; max 4.4 s
+
+[4.2] Safety distance 2r + 2*sqrt(2)*sigma + v_c*(tau + 0.2 s) + v_c^2/(4a); r = 0.386 m, sigma 0.5 m, a 3 m/s^2
+  v_close= 2 m/s: tau=0.1:  3.1 m  tau=0.5:  3.9 m  tau=1.0:  4.9 m
+  v_close= 5 m/s: tau=0.1:  5.8 m  tau=0.5:  7.8 m  tau=1.0: 10.3 m
+  v_close=10 m/s: tau=0.1: 13.5 m  tau=0.5: 17.5 m  tau=1.0: 22.5 m
+
+[4.2] CBF head-on, 5 m/s each, accel limit 3 m/s^2, Ds 3 m  (* below Ds, ! contact < 2r)
+  no avoidance:  0.50!   CBF, ideal tracking:  4.42 
+  gamma stale | plain  | predict | predict + inflate v*tau
+   0.5   0.0  |  7.23  |  7.23  |  7.23 
+   0.5   0.5  |  7.03  |  7.29  |  8.25 
+   0.5   1.0  |  6.46  |  7.46  |  9.89 
+   1.0   0.0  |  4.86  |  4.86  |  4.86 
+   1.0   0.5  |  4.41  |  4.93  |  6.43 
+   1.0   1.0  |  3.50  |  5.18  |  8.64 
+   3.0   0.0  |  1.19* |  1.19* |  1.19*
+   3.0   0.5  |  0.63! |  1.20* |  2.02*
+   3.0   1.0  |  0.52! |  1.19* |  3.82 
+
+[3.3] lat/lon -> local metres at 50 N: flat-earth with ellipsoid radii vs exact ECEF->ENU
+    100 m: ellipsoid radii 0.1 cm; sphere 6371 km 0.22 m
+   1000 m: ellipsoid radii 10.4 cm; sphere 6371 km 2.10 m
+   5000 m: ellipsoid radii 261.1 cm; sphere 6371 km 8.86 m
+
+[4.3] Coverage of 1 km x 1 km, camera 60 m AGL, HFOV 45 deg, 8 m/s
+  N=1: swath 49.7 m, 21 legs, 22.0 km and 45.8 min per drone (turns not slowed)
+  N=2: swath 49.7 m, 21 legs, 11.0 km and 22.9 min per drone (turns not slowed)
+  N=3: swath 49.7 m, 21 legs, 7.3 km and 15.3 min per drone (turns not slowed)
+
+[3.3] Shared-state bandwidth
+  40 B payload, 52 B packet; N=3 at 10 Hz: 12.5 kbit/s
+  40 B payload, 52 B packet; N=5 at 10 Hz: 20.8 kbit/s
+  40 B payload, 52 B packet; N=3 at 20 Hz: 25.0 kbit/s
+
+[6] Pixels on target for an x500 (span 2r) seen by a 1280-px, 90-deg HFOV camera
+  25 m: 19.7 px  50 m: 9.9 px  100 m: 4.9 px;  8 px (sibling E2 w_min) at 62 m

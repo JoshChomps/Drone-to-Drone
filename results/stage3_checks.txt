@@ -1,0 +1,43 @@
+[stage 3] Locating a silent drone (4 m/s, turning, ~50 m altitude) from observers at 60 m, 15-70 m away
+  heading bias 2 deg, roll/pitch noise 0.5 deg, box noise 1 px centre / 1.5 px width; size unknown
+  (0.25-0.8 m, prior 0.45 +- 0.25) unless stated; 40 seeds; RMS after 10 s, median [90th pct]
+  constant-velocity model with 3 m/s^2 acceleration noise (chosen on this scenario; 1 m/s^2 lags a turning drone)
+  pipeline check, straight-flying drone, no noise, 20 s:  1 hovering, size known: 0.41 m, 0.10 m/s;  2 hovering, bearing only: 0.05 m, 0.07 m/s;
+
+  camera 1280 px, 90 deg, tilted 15 deg down (f = 640 px; a 0.5 m drone is 8 px wide at 40 m)
+  configuration                                        pos, all time   pos, while seen  vel, while seen  seen  re-acq
+  1 orbiting, bearing + box size, NO re-acquisition     12.6 [ 36.6]   11.96 [ 34.9]    3.20 [ 5.4]      46 %  0.0
+  1 hovering, bearing only                              21.7 [ 37.4]   21.09 [ 38.4]    4.27 [ 5.7]      47 %  0.2
+  1 hovering, bearing + box size                        10.6 [ 26.4]   10.48 [ 27.0]    3.07 [ 4.4]      47 %  0.0
+  1 straight leg at 3 m/s, bearing + box size           14.2 [ 29.1]   13.79 [ 29.3]    3.19 [ 4.6]      36 %  0.1
+  1 orbiting, bearing only                              34.0 [ 69.7]   32.35 [ 70.5]    5.02 [ 7.3]      46 %  0.1
+  1 orbiting, bearing + box size                        12.6 [ 36.6]   11.96 [ 34.9]    3.20 [ 5.4]      46 %  0.1
+  1 hovering, bearing + box size, size KNOWN             6.9 [ 13.1]    6.32 [ 12.7]    2.86 [ 3.6]      45 %  0.0
+  2 hovering 30 deg apart, bearing + box size            7.4 [ 14.3]    7.41 [ 14.3]    2.13 [ 3.5]      48 %  0.1
+  2 hovering 90 deg apart, bearing only                  4.3 [ 11.5]    4.28 [ 11.5]    1.63 [ 3.5]      46 %  0.1
+  2 hovering 90 deg apart, bearing + box size            3.4 [  8.2]    3.42 [  8.2]    1.66 [ 2.9]      46 %  0.1
+  2 orbiting 90 deg apart, bearing + box size            4.2 [  7.5]    3.87 [  7.4]    1.61 [ 2.5]      45 %  0.0
+    same, headings calibrated to 0.5 deg                 2.1 [  4.6]    2.08 [  4.2]    1.42 [ 2.3]      45 %  0.1
+    same, motion model with less freedom (1 m/s^2)       7.7 [ 24.4]    7.28 [ 23.6]    2.70 [ 4.9]      45 %  0.6
+    same, link 0.5 s late, used as if fresh              4.2 [  8.8]    3.99 [  8.7]    2.02 [ 2.6]      45 %  0.1
+    same, link 0.5 s late, used at its own time          4.4 [  8.2]    4.33 [  7.9]    1.96 [ 2.9]      45 %  0.0
+    same, 0.5 s late + bursty loss (9 %), own time       4.2 [  8.7]    4.19 [  8.1]    2.05 [ 3.0]      43 %  0.0
+
+  camera 3840 px, 90 deg, tilted 15 deg down (f = 1920 px; a 0.5 m drone is 8 px wide at 120 m)
+  configuration                                        pos, all time   pos, while seen  vel, while seen  seen  re-acq
+  1 orbiting, bearing + box size, NO re-acquisition      7.6 [ 21.5]    7.64 [ 21.6]    2.13 [ 3.7]      89 %  0.0
+  1 hovering, bearing only                              24.7 [ 36.3]   24.67 [ 36.4]    4.56 [ 5.5]      87 %  0.2
+  1 hovering, bearing + box size                         8.8 [ 19.8]    7.31 [ 19.8]    1.65 [ 2.9]      87 %  0.1
+  1 straight leg at 3 m/s, bearing + box size            8.8 [ 16.0]    8.86 [ 16.0]    1.75 [ 2.8]      88 %  0.0
+  1 orbiting, bearing only                              27.5 [ 47.4]   27.47 [ 47.4]    4.16 [ 6.8]      89 %  0.0
+  1 orbiting, bearing + box size                         7.6 [ 21.5]    7.64 [ 21.6]    1.99 [ 3.7]      89 %  0.1
+  1 hovering, bearing + box size, size KNOWN             2.7 [  4.5]    2.47 [  4.1]    1.57 [ 2.0]      90 %  0.2
+  2 hovering 30 deg apart, bearing + box size            5.8 [ 11.0]    5.79 [ 11.0]    1.36 [ 2.1]      89 %  0.0
+  2 hovering 90 deg apart, bearing only                  2.9 [  7.4]    2.94 [  7.4]    1.04 [ 2.1]      90 %  0.1
+  2 hovering 90 deg apart, bearing + box size            2.3 [  4.0]    2.27 [  4.0]    0.99 [ 1.3]      90 %  0.1
+  2 orbiting 90 deg apart, bearing + box size            2.7 [  5.1]    2.65 [  5.1]    1.17 [ 1.6]      88 %  0.1
+    same, headings calibrated to 0.5 deg                 1.1 [  1.9]    1.10 [  1.9]    1.02 [ 1.2]      88 %  0.1
+    same, motion model with less freedom (1 m/s^2)       3.1 [  5.2]    3.10 [  5.2]    1.76 [ 2.2]      88 %  0.1
+    same, link 0.5 s late, used as if fresh              3.3 [  5.5]    3.26 [  5.5]    1.47 [ 1.9]      88 %  0.2
+    same, link 0.5 s late, used at its own time          2.5 [  5.1]    2.51 [  5.1]    1.72 [ 2.0]      88 %  0.0
+    same, 0.5 s late + bursty loss (9 %), own time       2.8 [  7.0]    2.85 [  7.0]    1.63 [ 2.3]      87 %  0.0

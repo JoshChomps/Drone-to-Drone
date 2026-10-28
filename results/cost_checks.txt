@@ -1,0 +1,8 @@
+[cost] stage 7 cued + calibrated, five observers, 3840 px, 3 seeds x 60 s, one process on this laptop;
+  per call, ms: median [99th percentile]; the tracker takes every camera's sightings each step
+  constant-velocity tracks: whole trial  22.8 s per seed (600 steps, 5 cameras, scoring included)
+    HeadingCalibrator.step       0.79 [  2.09] ms over 9000 calls
+    Tracker.step                19.88 [ 40.98] ms over 1800 calls
+  IMM tracks: whole trial  41.6 s per seed (600 steps, 5 cameras, scoring included)
+    HeadingCalibrator.step       0.92 [  2.19] ms over 9000 calls
+    Tracker.step                49.51 [ 88.01] ms over 1800 calls

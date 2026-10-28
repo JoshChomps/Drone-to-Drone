@@ -1,0 +1,6 @@
+[stage 7] five observers, five other drones; 3840 px, heading bias 2 deg, size unknown, 0.02 false alarms per frame unless stated; 16 seeds x 60 s; means; count ok with a 95 % interval over seeds
+  configuration                                found count ok        err m  swaps  false | heading deg   mate ok leak | other held taken | tiles/frame (full scan 24; 1280 px: 4)
+  GNSS drift 60 s, cued + calibrated           100 %   73 % [ 58- 87]  0.79  0.12  0.41 | 1.80 -> 0.33 | 98.7  1.2 |  0.0  0.0 |  9.5
+  GNSS drift 60 s, cues outside the image      100 %   67 % [ 50- 83]  0.86  0.18  0.95 | 1.80 -> 0.76 | 97.0  2.9 |  0.1  0.0 |  9.6
+  GNSS drift 60 s, + gate 99.9 %               100 %   89 % [ 80- 97]  0.82  0.19  0.17 | 1.80 -> 0.42 | 99.3  0.5 |  0.2  0.1 |  9.2
+  GNSS drift 60 s, + gate 99.9 %, sigma_pos 1.25 m 100 %   92 % [ 86- 99]  0.83  0.18  0.11 | 1.80 -> 0.42 | 99.1  0.4 |  0.4  0.1 |  9.2

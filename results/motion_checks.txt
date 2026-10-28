@@ -1,0 +1,38 @@
+[motion] two observers orbiting 90 deg apart, bearing + box size, size unknown, 3840 px; 40 seeds x 40 s;
+  RMS after 10 s, median over seeds [90th percentile]; paired: IMM minus CV 3 per seed, mean +- 95 % half-width
+
+  drone: wander; heading bias 2.0 deg
+  model                            pos while seen    vel while seen   re-acq
+  CV 1 m/s^2                        3.10 [ 5.18]    1.76 [2.17]      0.10
+  CV 3 m/s^2 (chosen in stage 3)    2.65 [ 5.09]    1.17 [1.63]      0.05
+  CV 6 m/s^2                        2.53 [ 5.03]    1.13 [1.60]      0.05
+  IMM 0.5 + 5 m/s^2                 2.60 [ 5.13]    1.17 [1.54]      0.05
+    IMM - CV 3, position: -0.032 +- 0.031
+    IMM - CV 3, velocity: +0.001 +- 0.027
+
+  drone: wander; heading bias 0.5 deg
+  model                            pos while seen    vel while seen   re-acq
+  CV 1 m/s^2                        1.78 [ 2.67]    1.59 [1.97]      0.07
+  CV 3 m/s^2 (chosen in stage 3)    1.10 [ 1.95]    1.02 [1.23]      0.07
+  CV 6 m/s^2                        1.05 [ 1.83]    0.97 [1.11]      0.03
+  IMM 0.5 + 5 m/s^2                 1.12 [ 1.93]    1.05 [1.20]      0.07
+    IMM - CV 3, position: +0.008 +- 0.022
+    IMM - CV 3, velocity: +0.018 +- 0.013
+
+  drone: legs; heading bias 2.0 deg
+  model                            pos while seen    vel while seen   re-acq
+  CV 1 m/s^2                        4.87 [ 8.88]    3.71 [4.59]      1.98
+  CV 3 m/s^2 (chosen in stage 3)    2.84 [ 4.83]    2.13 [2.71]      0.15
+  CV 6 m/s^2                        2.79 [ 5.12]    1.68 [2.44]      0.10
+  IMM 0.5 + 5 m/s^2                 2.84 [ 5.14]    1.82 [2.59]      0.07
+    IMM - CV 3, position: +0.695 +- 1.519
+    IMM - CV 3, velocity: -0.124 +- 0.243
+
+  drone: legs; heading bias 0.5 deg
+  model                            pos while seen    vel while seen   re-acq
+  CV 1 m/s^2                        4.27 [ 6.99]    3.58 [4.23]      1.80
+  CV 3 m/s^2 (chosen in stage 3)    1.32 [ 2.03]    2.00 [2.34]      0.03
+  CV 6 m/s^2                        1.16 [ 1.79]    1.61 [1.85]      0.03
+  IMM 0.5 + 5 m/s^2                 1.23 [ 1.91]    1.75 [2.13]      0.05
+    IMM - CV 3, position: -0.103 +- 0.024
+    IMM - CV 3, velocity: -0.244 +- 0.025

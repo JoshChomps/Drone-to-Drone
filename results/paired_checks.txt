@@ -1,0 +1,22 @@
+[paired] same seeds, scene from its own random stream; five observers, 3840 px, heading bias 2 deg declared,
+  size unknown, 0.02 false alarms per frame unless stated; 60 s per seed
+  A - B; each side mean +- 95 % half-width over seeds (unpaired); then the per-seed difference +- 95 % half-width
+  drone size known - baseline (64 seeds)
+    count ok         A  65.39 +- 9.01  B  68.03 +- 9.30  A-B  -2.64 +- 5.80 %   (A worse on  38 % of seeds)
+    found            A  99.57 +- 0.16  B  99.52 +- 0.19  A-B  +0.05 +- 0.09 %   (A worse on  20 % of seeds)
+    error            A   1.76 +- 0.12  B   1.81 +- 0.13  A-B  -0.05 +- 0.02 m   (A worse on  16 % of seeds)
+    swaps/drone/min  A   1.58 +- 0.54  B   0.77 +- 0.28  A-B  +0.81 +- 0.38     (A worse on  59 % of seeds)
+    false tracks     A   0.62 +- 0.22  B   0.57 +- 0.21  A-B  +0.05 +- 0.11     (A worse on  39 % of seeds)
+  1280 px camera - 3840 px camera (64 seeds)
+    count ok         A  72.05 +- 8.04  B  68.03 +- 9.30  A-B  +4.01 +- 7.23 %   (A worse on  42 % of seeds)
+    found            A  98.37 +- 0.49  B  99.52 +- 0.19  A-B  -1.15 +- 0.38 %   (A worse on  69 % of seeds)
+    error            A   2.23 +- 0.14  B   1.81 +- 0.13  A-B  +0.43 +- 0.05 m   (A worse on  98 % of seeds)
+    swaps/drone/min  A   1.13 +- 0.56  B   0.77 +- 0.28  A-B  +0.36 +- 0.42     (A worse on  38 % of seeds)
+    false tracks     A   0.51 +- 0.18  B   0.57 +- 0.21  A-B  -0.06 +- 0.15     (A worse on  53 % of seeds)
+  stage 7: 3 observers - 5 observers (32 seeds)
+    count ok         A  93.90 +- 6.31  B  82.89 +-10.24  A-B +11.01 +-12.11 %   (A worse on  25 % of seeds)
+    found            A  98.62 +- 1.20  B  99.92 +- 0.08  A-B  -1.30 +- 1.21 %   (A worse on  66 % of seeds)
+    error            A   1.03 +- 0.08  B   0.76 +- 0.06  A-B  +0.27 +- 0.08 m   (A worse on  94 % of seeds)
+    swaps/drone/min  A   0.17 +- 0.10  B   0.20 +- 0.21  A-B  -0.04 +- 0.24     (A worse on  25 % of seeds)
+    false tracks     A   0.16 +- 0.19  B   0.25 +- 0.17  A-B  -0.09 +- 0.26     (A worse on  34 % of seeds)
+    teammate boxes leaked: A 0.57 %  B 1.09 %;  tiles A  8.1  B  8.9

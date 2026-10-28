@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+
+# Local-only files: AI tool configs, interview notes, secrets, editor locks
+CLAUDE.md
+AGENTS.md
+.claude/
+PROF_QA.md
+HANDOFF*.md
+.env
+*.lck

@@ -1,0 +1,25 @@
+[swaps] every identity swap, 32 seeds x 60 s, split scene stream (as results/paired_checks.txt)
+  baseline (size unknown): count ok  64 %, error 1.89 m, swaps/drone/min 1.16, false tracks 0.69
+    154 swaps; per seed median 2, max 17, seeds with none 12; top 3 seeds hold 31 %
+    old track gone (died or merged away): 36;  old track still alive: 118;  back to the track held two swaps ago (flapping): 79
+      old still alive: its distance to the drone median   3.9 m (10-90 %  2.5-  6.3)
+      the two tracks apart: median  6.0 m; under 5 m: 31; the drone's nearest other drone: median 16.4 m, under 8 m: 22
+    new track's age at the swap: median  14.3 s; under 2 s: 48; new track's distance to the drone median  3.4 m
+  drone size known: count ok  60 %, error 1.82 m, swaps/drone/min 2.17, false tracks 0.82
+    290 swaps; per seed median 4, max 44, seeds with none 8; top 3 seeds hold 37 %
+    old track gone (died or merged away): 47;  old track still alive: 243;  back to the track held two swaps ago (flapping): 173
+      old still alive: its distance to the drone median   3.4 m (10-90 %  2.5-  6.2)
+      the two tracks apart: median  5.2 m; under 5 m: 97; the drone's nearest other drone: median 15.9 m, under 8 m: 44
+    new track's age at the swap: median  19.3 s; under 2 s: 80; new track's distance to the drone median  2.7 m
+  baseline, merge within 5 m: count ok  66 %, error 1.89 m, swaps/drone/min 1.35, false tracks 0.53
+    180 swaps; per seed median 5, max 29, seeds with none 3; top 3 seeds hold 31 %
+    old track gone (died or merged away): 98;  old track still alive: 82;  back to the track held two swaps ago (flapping): 46
+      old still alive: its distance to the drone median   5.0 m (10-90 %  2.7-  7.4)
+      the two tracks apart: median  6.3 m; under 5 m: 0; the drone's nearest other drone: median 12.0 m, under 8 m: 35
+    new track's age at the swap: median   0.9 s; under 2 s: 96; new track's distance to the drone median  3.2 m
+  size known, merge within 5 m: count ok  81 %, error 1.81 m, swaps/drone/min 1.40, false tracks 0.27
+    186 swaps; per seed median 4, max 22, seeds with none 1; top 3 seeds hold 31 %
+    old track gone (died or merged away): 102;  old track still alive: 84;  back to the track held two swaps ago (flapping): 45
+      old still alive: its distance to the drone median   5.2 m (10-90 %  3.1-  7.6)
+      the two tracks apart: median  6.2 m; under 5 m: 0; the drone's nearest other drone: median 16.0 m, under 8 m: 27
+    new track's age at the swap: median   0.2 s; under 2 s: 114; new track's distance to the drone median  2.2 m

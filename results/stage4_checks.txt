@@ -1,0 +1,17 @@
+[stage 4] Five identical drones (0.77 m, 4 m/s, turning) tracked by a team's cameras; 3840 px / 90 deg unless stated
+  heading bias 2 deg and the tracker told to expect it; size unknown (prior 0.45 +- 0.25); 0.02 false alarms per
+  camera frame; ideal link; a track needs two cameras to count (one when there is one observer); unless stated
+  8 seeds x 60 s; mean over seeds [worst seed]
+  configuration                                 found        count ok   error m      swaps/drone/min  false tracks
+  1 observer                                     12 % [  1]   77 %      6.10 [ 7.0]  0.69 [ 1.0]      4.09 [ 4.7]
+  2 observers                                    92 % [ 76]   60 %      2.61 [ 4.0]  1.08 [ 3.8]      0.85 [ 1.8]
+  3 observers                                    99 % [ 97]   76 %      1.99 [ 2.8]  0.42 [ 1.7]      0.33 [ 1.4]
+  5 observers                                   100 % [ 99]   86 %      1.67 [ 2.8]  0.54 [ 1.7]      0.41 [ 3.2]
+  5 observers, drone size known                 100 % [ 99]   76 %      1.63 [ 2.4]  0.93 [ 2.4]      0.54 [ 3.4]
+  5 observers, headings calibrated to 0.5 deg   100 % [100]   93 %      1.01 [ 1.5]  0.21 [ 1.2]      0.08 [ 0.2]
+  5 observers, link 0.5 s late + bursty loss     99 % [ 96]   83 %      2.02 [ 2.9]  0.39 [ 1.0]      0.48 [ 3.4]
+  5 observers, ten times the false alarms       100 % [ 98]   30 %      1.66 [ 2.7]  0.24 [ 1.2]      1.28 [ 3.2]
+  5 observers, 1280 px camera                    99 % [ 98]   84 %      1.96 [ 3.4]  0.63 [ 1.7]      0.27 [ 1.6]
+  5 observers, any one camera may confirm       100 % [ 99]   79 %      1.67 [ 2.8]  0.63 [ 2.4]      0.51 [ 3.4]
+  5 observers, tracker not told about the bias  100 % [ 99]   35 %      2.12 [ 2.9]  2.61 [ 8.4]      1.66 [ 4.8]
+  5 observers, matching on distance alone       100 % [ 99]   28 %      1.68 [ 2.7]  0.60 [ 1.4]      1.34 [ 3.1]
